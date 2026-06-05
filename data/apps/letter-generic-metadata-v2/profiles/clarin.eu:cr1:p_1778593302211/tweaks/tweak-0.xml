@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1778593302211</ID>
+		<Name>Letter-v2</Name>
+		<Description>Generic elements for letter-metadata description, compliant with the CIDOC-CRM-based ontology CER (https://lod.academy/cer/vocab/ontology#).</Description>
+		<Status>development</Status>
+		<DerivedFrom>clarin.eu:cr1:p_1761816151556</DerivedFrom>
+	</Header>
+	<Component name="Letter-v2">
+		<Documentation>A single message from a sender to one or more organizations or people.</Documentation>
+		<Element name="project">
+			<Documentation>For internal use to assign a label to a specific project.</Documentation>
+		</Element>
+		<Component name="Identifier">
+			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to:  	https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>
+			<Element name="identifierType">
+				<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+				
+			</Element>
+			<Element name="identifierValue">
+				<Documentation>Add the identifier's label (e.g., the shelfmark)</Documentation>
+			</Element>
+			<Element name="identifierUrl">
+				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+			</Element>
+		</Component>
+		<Component name="SourceBasicMetadata">
+			<Element name="nameOrTitle">
+				<Documentation>The name of a Source. For Sources: Use a user-friendly name to identify the source. Depending on the Source type, this may contain a combination of it's name, year of creation, creator, et cetera. </Documentation>
+			</Element>
+			<Element name="additionalType">
+				<Documentation>Recommendation for vocabularies to use: https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type. You can use a term from the PiCo thesaurus for Source types: https://terms.personsincontext.org/sourcetypes . (Internal note: this property is equivalent as this one in PiCo: https://schema.org/additionalType).</Documentation>
+				
+			</Element>
+			<Element name="accessURL">
+				<Documentation>A URL of the resource that gives access to it. In PiCo: A media object, usually a scan, that encodes the Source of a Person observation (https://schema.org/associatedMedia).</Documentation>
+			</Element>
+			<Element name="landingPage">
+				<Documentation>Optional: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, [a source], its distributions and/or additional information (e.g., HTML page with description, metadata, links, DOI landing page, catalog page, Zotero item page)</Documentation>
+			</Element>
+			<Element name="abstract">
+				<Documentation>An abstract is a short description that summarizes a CreativeWork.</Documentation>
+			</Element>
+			<Element name="zoteroGroupItemLink">
+				<Documentation>Add here the link to the item in the Zotero group: 1) go to https://www.zotero.org/groups/6097405/ecodicesnl. 2) Right-click on the item and select the option "copy link". 3) Paste the link here. Here's an example item URL: https://www.zotero.org/groups/4804340/hereyourgroupname/items/EQ2D34GW</Documentation>
+			</Element>
+			<Element name="pageRange"><!--cues--></Element>
+			<Element name="notesSource"><!--cues--></Element>
+			<Component name="Keywords">
+				<Documentation>Add as many keywords as wanted, making sure they have URIs.</Documentation>
+				<Component name="Identifier">
+					<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to:  	https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>
+					<Element name="identifierType">
+						<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+						
+					</Element>
+					<Element name="identifierValue">
+						<Documentation>Add the identifier's label (e.g., the shelfmark)</Documentation>
+					</Element>
+					<Element name="identifierUrl">
+						<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+					</Element>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="Sending">
+			<Documentation>"This class comprises the sending process of correspondence items involving at least two persons. It has been adapted from the TEI standard for correspondences, specifically drawing from the correspAction element. The aim of this class is to supply information concerning the sending or dispatch of a message."</Documentation>
+			<Component name="Sender">
+				<Documentation>"This property describes the Person (CER17) involved in or responsible for an Editing (Activity) (CER 15) or for a Correspondence Action (CER12), for example sender(s) or receiver(s) of a letter..."</Documentation>
+				<Component name="LabelAsObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="LinkToReconstruction">
+					<Component name="Relationship">
+						<Element name="to"><!--cues--></Element>
+						<Element name="category">
+							<Documentation>Type of relationship.</Documentation>
+						</Element>
+						<Element name="description">
+							<Documentation>Description or notes clarifying the relationship.</Documentation>
+						</Element>
+						<Element name="date">
+							<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+						</Element>
+					</Component>
+					<Component name="ReconstructionActivity">
+						<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>
+						<Element name="typeActivity">
+							<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>
+							
+						</Element>
+						<Element name="agent">
+							<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>
+						</Element>
+						<Element name="startedAtTime">
+							<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>
+						</Element>
+						<Element name="endedAtTime">
+							<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>
+						</Element>
+						<Element name="noteReconstruction"><!--cues--></Element>
+					</Component>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="DateSent">
+				<Documentation>"This property associates an instance of CER12 Correspondence Action or CER15 Editing or CER24 Co-Presence with one instance of CER18 Time-Span during which the Correspondence Action (CER12) (like Sending (CER13) or Receiving (CER14)) or the Editing process or the inferred Co-Presence of two historical actors was ongoing. The associated instance of CER18 Time-Span is understood as the real time-span during which the phenomena making up the temporal entity instance were active."</Documentation>
+				<Component name="LabelAsObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="DateNormalized">
+					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>:Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="PlaceSent">
+				<Documentation>"This property describes the Place (CER19) where a Correspondence Action (CER12) happened, meaning the sending and receiving place, as well as the where the Co-Presence (CER24) of two histociral actors, inferred through reasoning-processes, occured."</Documentation>
+				<Component name="LabelAsObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="LinkToReconstruction">
+					<Component name="Relationship">
+						<Element name="to"><!--cues--></Element>
+						<Element name="category">
+							<Documentation>Type of relationship.</Documentation>
+						</Element>
+						<Element name="description">
+							<Documentation>Description or notes clarifying the relationship.</Documentation>
+						</Element>
+						<Element name="date">
+							<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+						</Element>
+					</Component>
+					<Component name="ReconstructionActivity">
+						<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>
+						<Element name="typeActivity">
+							<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>
+							
+						</Element>
+						<Element name="agent">
+							<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>
+						</Element>
+						<Element name="startedAtTime">
+							<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>
+						</Element>
+						<Element name="endedAtTime">
+							<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>
+						</Element>
+						<Element name="noteReconstruction"><!--cues--></Element>
+					</Component>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="Receiving">
+			<Documentation>"This class comprises the receiving process of correspondence items involving at least two persons. It has been adapted from the TEI standard for correspondences, specifically drawing from the correspAction element. The aim of this class is to supply information concerning the receipt of a message."</Documentation>
+			<Component name="Receiver">
+				<Component name="LabelAsObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="LinkToReconstruction">
+					<Component name="Relationship">
+						<Element name="to"><!--cues--></Element>
+						<Element name="category">
+							<Documentation>Type of relationship.</Documentation>
+						</Element>
+						<Element name="description">
+							<Documentation>Description or notes clarifying the relationship.</Documentation>
+						</Element>
+						<Element name="date">
+							<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+						</Element>
+					</Component>
+					<Component name="ReconstructionActivity">
+						<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>
+						<Element name="typeActivity">
+							<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>
+							
+						</Element>
+						<Element name="agent">
+							<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>
+						</Element>
+						<Element name="startedAtTime">
+							<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>
+						</Element>
+						<Element name="endedAtTime">
+							<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>
+						</Element>
+						<Element name="noteReconstruction"><!--cues--></Element>
+					</Component>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="DateReceived">
+				<Component name="LabelAsObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="DateNormalized">
+					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>:Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="PlaceReceived">
+				<Documentation>"This class is used to refer to places involved in a Correspondence Action (CER12 Correspondence Action) and places which are mentioned in a letter text (CER4 Index Information). They may have an additional authority record like geo names (CER16 Authority Record) but this is not mandatory. Places are not used to give more information about the provenance of a letter, as this is not within the ontology’s scope."</Documentation>
+				<Component name="LabelAsObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="LinkToReconstruction">
+					<Component name="Relationship">
+						<Element name="to"><!--cues--></Element>
+						<Element name="category">
+							<Documentation>Type of relationship.</Documentation>
+						</Element>
+						<Element name="description">
+							<Documentation>Description or notes clarifying the relationship.</Documentation>
+						</Element>
+						<Element name="date">
+							<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+						</Element>
+					</Component>
+					<Component name="ReconstructionActivity">
+						<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>
+						<Element name="typeActivity">
+							<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>
+							
+						</Element>
+						<Element name="agent">
+							<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>
+						</Element>
+						<Element name="startedAtTime">
+							<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>
+						</Element>
+						<Element name="endedAtTime">
+							<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>
+						</Element>
+						<Element name="noteReconstruction"><!--cues--></Element>
+					</Component>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="SeeAlso">
+			<Element name="url"><!--cues--></Element>
+			<Element name="label"><!--cues--></Element>
+			<Element name="providerSource">
+				<Documentation>the name of the repository or project (e.g., "correspSearch", "Kalliope", "Deutsches Textarchiv")</Documentation>
+			</Element>
+		</Component>
+		<Component name="Note">
+			<Documentation>Any</Documentation>
+			<Element name="noteType">
+				<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+				
+			</Element>
+			<Element name="noteContent"><!--cues--></Element>
+		</Component>
+	</Component>
+</ComponentSpec>

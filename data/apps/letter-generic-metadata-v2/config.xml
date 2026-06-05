@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<config>
+  <app>
+    <name>letter-generic-metadata-v2</name>
+    <title>Letter-generic-metadata Editor v2</title>
+    <def_prof>clarin.eu:cr1:p_1778593302211</def_prof>
+    <cmdi_version>1.2</cmdi_version>
+    <access>
+      <users>./htp</users>
+      <read>users</read>
+      <write>users</write>
+    </access>
+    <prof>
+      <letter>
+        <prof>clarin.eu:cr1:p_1778593302211</prof>
+        <label_en>letter</label_en>
+        <label_plural_en>letters</label_plural_en>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+        </list>
+      </letter>
+      <person>
+        <prof>clarin.eu:cr1:p_1758888743558</prof>
+        <label_en>person</label_en>
+        <label_plural_en>persons</label_plural_en>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <name>
+            <xpath>string(//cmdp:PersonNamePreferred/cmdp:LabelNormalised/cmdp:fullName)</xpath>
+            <label>full name</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </name>
+        </list>
+      </person>
+      <place>
+        <prof>clarin.eu:cr1:p_1761816151568</prof>
+        <label_en>place</label_en>
+        <label_plural_en>places</label_plural_en>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <name>
+            <xpath>string(//cmdp:PlaceName/cmdp:preferredName)</xpath>
+            <label>preferred name</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </name>
+        </list>
+      </place>
+    </prof>
+  </app>
+</config>

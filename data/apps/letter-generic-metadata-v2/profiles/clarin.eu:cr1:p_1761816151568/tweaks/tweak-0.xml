@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1761816151568</ID>
+		<Name>Place</Name>
+		<Description>For "authorized" place names.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="Place">
+		<Component name="Identifiers">
+			<Documentation>-&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>
+			<Element name="identifierType">
+				<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+				
+			</Element>
+			<Element name="identifierValue">
+				<Documentation>Add the identifier's label (e.g., the shelfmark)</Documentation>
+			</Element>
+			<Element name="identifierUri">
+				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+			</Element>
+		</Component>
+		<Component name="PlaceType">
+			<Documentation>For the type of place. Preferably using GeoNames feature classes (e.g., P.PPL for populated place: https://www.geonames.org/ontology#P.PPL) </Documentation>
+			<Element name="label"><!--cues--></Element>
+			<Element name="uri"><!--cues--></Element>
+		</Component>
+		<Component name="PlaceName">
+			<Element name="preferredName"><!--cues--></Element>
+			<Element name="alternativeName"><!--cues--></Element>
+		</Component>
+	</Component>
+</ComponentSpec>
