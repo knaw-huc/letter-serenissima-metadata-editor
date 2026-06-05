@@ -13,6 +13,7 @@
     <prof>
       <letter>
         <prof>clarin.eu:cr1:p_1778593302211</prof>
+        <entity>//cmdp:Letter</entity>
         <label_en>letter</label_en>
         <label_plural_en>letters</label_plural_en>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
@@ -23,10 +24,47 @@
             <sort>true</sort>
             <filter>true</filter>
           </nr>
+          <project>
+            <xpath>string(//cmdp:project)</xpath>
+            <label>Project</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </project>
+          <sender>
+            <xpath>string(//cmdp:Sending/cmdp:Sender/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
+            <label>SenderNameAsWritten</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </sender>
+          <receiver>
+            <xpath>string(//cmdp:Receiving/cmdp:Receiver/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
+            <label>ReceiverNameAsWritten</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </receiver>
+          <letterDateSent>
+            <xpath>string(//cmdp:Sending/cmdp:DateSent/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
+            <label>DateSentAsWritten</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </letterDateSent>
+          <letterPlaceSent>
+            <xpath>string(//cmdp:Sending/cmdp:PlaceSent/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
+            <label>PlaceSentAsWritten</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </letterPlaceSent>
+          <letterPlaceReceived>
+            <xpath>string(//cmdp:Receiving/cmdp:PlaceReceived/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
+            <label>PlaceReceivedAsWritten</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </letterPlaceReceived>
         </list>
       </letter>
       <person>
         <prof>clarin.eu:cr1:p_1758888743558</prof>
+        <entity>//cmdp:Person</entity>
         <label_en>person</label_en>
         <label_plural_en>persons</label_plural_en>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
