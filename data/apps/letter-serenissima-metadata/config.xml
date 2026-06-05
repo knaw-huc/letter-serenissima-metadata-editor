@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <config>
   <app>
-    <name>letter-generic-metadata-v2</name>
-    <title>Letter-generic-metadata Editor v2</title>
+    <name>letter-serenissima-metadata</name>
+    <title>Correspondentia Serenissima Metadata Editor</title>
     <def_prof>clarin.eu:cr1:p_1778593302211</def_prof>
     <cmdi_version>1.2</cmdi_version>
     <access>
