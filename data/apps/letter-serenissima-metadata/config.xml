@@ -64,10 +64,9 @@
       </letter>
       <person>
         <prof>clarin.eu:cr1:p_1758888743558</prof>
-        <entity>//cmdp:Person</entity>
         <label_en>person</label_en>
         <label_plural_en>persons</label_plural_en>
-        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <title>string(//cmdp:PersonNamePreferred/cmdp:LabelNormalised/cmdp:fullName)</title>
         <list>
           <nr>
             <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>

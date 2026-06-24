@@ -21,9 +21,9 @@
 			</ValueScheme>
 		</Element>
 		<Component name="Identifier" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" CardinalityMin="1" CardinalityMax="unbounded">
-			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to:  	https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>
+<!--			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to:  	https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>-->
 			<Element name="identifierType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+				<Documentation>The type of letter identifier (e.g., Shelfmark, project local</Documentation>
 				<ValueScheme>
 					<Vocabulary>
 						<enumeration>
@@ -35,21 +35,22 @@
 							<item ConceptLink="" AppInfo="">Shelfmark</item>
 <!--							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>-->
 <!--							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>-->
+							<item ConceptLink="" AppInfo="">Other</item>
 						</enumeration>
 					</Vocabulary>
 				</ValueScheme>
 			</Element>
 			<Element name="identifierValue" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>Add the identifier's label (e.g., the shelfmark)</Documentation>
+				<Documentation>Add the identifier's label (e.g., the shelfmark). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
 			</Element>
 			<Element name="identifierUrl" ConceptLink="https://schema.org/url" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here.</Documentation>
 			</Element>
 		</Component>
 		<Component name="SourceBasicMetadata" ComponentRef="clarin.eu:cr1:c_1761816151555" CardinalityMin="1" CardinalityMax="1">
-			<Element name="nameOrTitle" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>The name of a Source. For Sources: Use a user-friendly name to identify the source. Depending on the Source type, this may contain a combination of it's name, year of creation, creator, et cetera. </Documentation>
-			</Element>
+<!--			<Element name="nameOrTitle" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>The name of a Source. For Sources: Use a user-friendly name to identify the source. Depending on the Source type, this may contain a combination of it's name, year of creation, creator, et cetera. </Documentation>-->
+<!--			</Element>-->
 <!--			<Element name="additionalType" ConceptLink="http://www.w3.org/ns/dcat#resource_type" CardinalityMin="1" CardinalityMax="1">-->
 <!--				<Documentation>Recommendation for vocabularies to use: https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type. You can use a term from the PiCo thesaurus for Source types: https://terms.personsincontext.org/sourcetypes . (Internal note: this property is equivalent as this one in PiCo: https://schema.org/additionalType).</Documentation>-->
 <!--				<ValueScheme>-->
@@ -105,13 +106,13 @@
 <!--			</Component>-->
 		</Component>
 		<Component name="Sending" ConceptLink="https://lod.academy/cer/vocab/ontology#13_Sending" CardinalityMin="1" CardinalityMax="1">
-			<Documentation>"This class comprises the sending process of correspondence items involving at least two persons. It has been adapted from the TEI standard for correspondences, specifically drawing from the correspAction element. The aim of this class is to supply information concerning the sending or dispatch of a message."</Documentation>
-			<Component name="Sender" ConceptLink="https://lod.academy/cer/vocab/ontology#17_Person" CardinalityMin="0" CardinalityMax="unbounded">
-				<Documentation>"This property describes the Person (CER17) involved in or responsible for an Editing (Activity) (CER 15) or for a Correspondence Action (CER12), for example sender(s) or receiver(s) of a letter..."</Documentation>
-				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
-					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
-					</Element>
+<!--			<Documentation>"This class comprises the sending process of correspondence items involving at least two persons. It has been adapted from the TEI standard for correspondences, specifically drawing from the correspAction element. The aim of this class is to supply information concerning the sending or dispatch of a message."</Documentation>-->
+			<Component name="Sender" ConceptLink="https://lod.academy/cer/vocab/ontology#17_Person" CardinalityMin="1" CardinalityMax="unbounded">
+<!--				<Documentation>"This property describes the Person (CER17) involved in or responsible for an Editing (Activity) (CER15) or for a Correspondence Action (CER12), for example sender(s) or receiver(s) of a letter..."</Documentation>-->
+<!--				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>-->
+<!--					</Element>-->
 <!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
 <!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
 <!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
@@ -128,10 +129,12 @@
 <!--						</Element>-->
 <!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 <!--					</Component>-->
-				</Component>
+<!--				</Component>-->
 				<Component name="LinkToReconstruction" ComponentRef="clarin.eu:cr1:c_1761816151566" CardinalityMin="1" CardinalityMax="1">
 					<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
-						<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+						<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+							<Documentation>Start typing and select the person from the other Editor. If the person doesn't exist yet, create it in the person Editor first.</Documentation>
+						</Element>
 <!--						<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
 <!--							<Documentation>Type of relationship.</Documentation>-->
 <!--						</Element>-->
@@ -188,7 +191,7 @@
 				<Documentation>"This property associates an instance of CER12 Correspondence Action or CER15 Editing or CER24 Co-Presence with one instance of CER18 Time-Span during which the Correspondence Action (CER12) (like Sending (CER13) or Receiving (CER14)) or the Editing process or the inferred Co-Presence of two historical actors was ongoing. The associated instance of CER18 Time-Span is understood as the real time-span during which the phenomena making up the temporal entity instance were active."</Documentation>
 				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
 					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+						<Documentation>Write here the date as observed in the source (as written or transcribed, or extracted).</Documentation>
 					</Element>
 <!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
 <!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
@@ -208,12 +211,12 @@
 <!--					</Component>-->
 				</Component>
 				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
-					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Documentation>For complete dates or date ranges use: YYYY-MM-DD. Example: 2025-07-17 (17 July 2025). For uncertain dates or date ranges, use these rules: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
 					<Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions from the link above</Documentation>
 					</Element>
 					<Element name="dateEnd" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						<Documentation>Use this field to enter the end date if there was a range), follow the instructions from the link above</Documentation>
 					</Element>
 					<Element name="calendar" CardinalityMin="1" CardinalityMax="1">
 						<ValueScheme>
@@ -228,7 +231,7 @@
 						</ValueScheme>
 					</Element>
 					<Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>:Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+						<Documentation>Add any clarifying notes related to the dates.</Documentation>
 					</Element>
 <!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
 <!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
@@ -250,10 +253,10 @@
 			</Component>
 			<Component name="PlaceSent" ConceptLink="https://lod.academy/cer/vocab/ontology#19_Place" CardinalityMin="1" CardinalityMax="1">
 				<Documentation>"This property describes the Place (CER19) where a Correspondence Action (CER12) happened, meaning the sending and receiving place, as well as the where the Co-Presence (CER24) of two histociral actors, inferred through reasoning-processes, occured."</Documentation>
-				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
-					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
-					</Element>
+<!--				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>-->
+<!--					</Element>-->
 <!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
 <!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
 <!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
@@ -270,10 +273,12 @@
 <!--						</Element>-->
 <!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 <!--					</Component>-->
-				</Component>
+<!--				</Component>-->
 				<Component name="LinkToReconstruction" ComponentRef="clarin.eu:cr1:c_1761816151566" CardinalityMin="1" CardinalityMax="1">
 					<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
-						<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+						<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+							<Documentation>Start typing and select the place from the other Editor. If the place doesn't exist yet, create it in the place Editor first.</Documentation>
+						</Element>
 <!--						<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
 <!--						<Documentation>Type of relationship.</Documentation>-->
 <!--					</Element>-->
@@ -330,10 +335,10 @@
 		<Component name="Receiving" ConceptLink="https://lod.academy/cer/vocab/ontology#14_Receiving" CardinalityMin="1" CardinalityMax="1">
 			<Documentation>"This class comprises the receiving process of correspondence items involving at least two persons. It has been adapted from the TEI standard for correspondences, specifically drawing from the correspAction element. The aim of this class is to supply information concerning the receipt of a message."</Documentation>
 			<Component name="Receiver" ConceptLink="https://lod.academy/cer/vocab/ontology#17_Person" CardinalityMin="0" CardinalityMax="unbounded">
-				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
-					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
-					</Element>
+<!--				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>-->
+<!--					</Element>-->
 <!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
 <!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
 <!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
@@ -350,7 +355,7 @@
 <!--						</Element>-->
 <!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 <!--					</Component>-->
-				</Component>
+<!--				</Component>-->
 				<Component name="LinkToReconstruction" ComponentRef="clarin.eu:cr1:c_1761816151566" CardinalityMin="1" CardinalityMax="1">
 					<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
 						<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
@@ -407,6 +412,7 @@
 				</Component>
 			</Component>
 			<Component name="DateReceived" ConceptLink="https://lod.academy/cer/vocab/ontology#18_Time-Span" CardinalityMin="1" CardinalityMax="1">
+				<Documentation>For complete dates or date ranges use: YYYY-MM-DD. Example: 2025-07-17 (17 July 2025). For uncertain dates or date ranges, use these rules: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
 				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
 					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
@@ -429,12 +435,12 @@
 <!--					</Component>-->
 				</Component>
 				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
-					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Documentation>For complete dates or date ranges use: YYYY-MM-DD. Example: 2025-07-17 (17 July 2025). For uncertain dates or date ranges, use these rules: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
 					<Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions from the link above</Documentation>
 					</Element>
 					<Element name="dateEnd" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						<Documentation>Use this field to enter the end date if there was a range), follow the instructions from the link above</Documentation>
 					</Element>
 					<Element name="calendar" CardinalityMin="1" CardinalityMax="1">
 						<ValueScheme>
@@ -449,7 +455,7 @@
 						</ValueScheme>
 					</Element>
 					<Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>:Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+						<Documentation>Add any clarifying notes related to the dates.</Documentation>
 					</Element>
 <!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
 <!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->

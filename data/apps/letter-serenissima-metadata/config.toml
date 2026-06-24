@@ -76,10 +76,10 @@ filter="'select'"
 ## PERSONS
 [app.prof.person]
 prof="clarin.eu:cr1:p_1758888743558"
-entity="//cmdp:Person"
+#entity="//cmdp:Person"
 label_en="person"
 label_plural_en="persons"
-title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+title="string(//cmdp:PersonNamePreferred/cmdp:LabelNormalised/cmdp:fullName)"
 
 [app.prof.person.list.nr]
 xpath="replace(//*:MdSelfLink,'unl://','')"
