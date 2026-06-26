@@ -20,8 +20,8 @@
 				</Vocabulary>
 			</ValueScheme>
 		</Element>
-		<Component name="Identifier" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" CardinalityMin="1" CardinalityMax="unbounded">
-<!--			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to:  	https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>-->
+		<Component name="Identifiers" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" CardinalityMin="1" CardinalityMax="unbounded">
+<!--			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>-->
 			<Element name="identifierType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 				<Documentation>The type of letter identifier (e.g., Shelfmark, project local</Documentation>
 				<ValueScheme>
@@ -552,6 +552,102 @@
 <!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
+			</Component>
+		</Component>
+		<Component name="MentionedPerson" ConceptLink="https://lod.academy/cer/vocab/ontology#4_Index_Information" CardinalityMin="0" CardinalityMax="unbounded">
+<!--			<Documentation>The MENTION: a CER4 Index Information instance (cidoc:E33 Linguistic Object).        This is the textual conceptualization of the person in the letter, attached to the Lettertext via P5 has_component (cidoc:P148).</Documentation>-->
+<!--			<Component name="LabelObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">-->
+<!--				<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>-->
+<!--				</Element>-->
+<!--				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
+<!--						<ValueScheme>-->
+<!--							<Vocabulary>-->
+<!--								<enumeration>-->
+<!--									<item ConceptLink="" AppInfo="">Certain</item>-->
+<!--									<item ConceptLink="" AppInfo="">Conjecture</item>-->
+<!--									<item ConceptLink="" AppInfo="">Uncertain</item>-->
+<!--									<item ConceptLink="" AppInfo="">Unknown</item>-->
+<!--								</enumeration>-->
+<!--							</Vocabulary>-->
+<!--						</ValueScheme>-->
+<!--					</Element>-->
+<!--					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--				</Component>-->
+<!--			</Component>-->
+			<Component name="LinkToReconstruction" ComponentRef="clarin.eu:cr1:c_1761816151566" CardinalityMin="1" CardinalityMax="1">
+				<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
+					<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Start typing and select the person from the other Editor. If the person doesn't exist yet, create it in the person Editor first.</Documentation>
+					</Element>
+<!--					<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Type of relationship.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Description or notes clarifying the relationship.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="date" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Date in which this relationship took place (if applicable).</Documentation>-->
+<!--					</Element>-->
+					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
+						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							<ValueScheme>
+								<Vocabulary>
+									<enumeration>
+										<item ConceptLink="" AppInfo="">Certain</item>
+										<item ConceptLink="" AppInfo="">Conjecture</item>
+										<item ConceptLink="" AppInfo="">Uncertain</item>
+										<item ConceptLink="" AppInfo="">Unknown</item>
+									</enumeration>
+								</Vocabulary>
+							</ValueScheme>
+						</Element>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+					</Component>
+				</Component>
+<!--				<Component name="ReconstructionActivity" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>-->
+<!--					<Element name="typeActivity" CardinalityMin="1" CardinalityMax="1">-->
+<!--						<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>-->
+<!--						<ValueScheme>-->
+<!--							<Vocabulary>-->
+<!--								<enumeration>-->
+<!--									<item>reconciliation</item>-->
+<!--									<item>close-reading</item>-->
+<!--								</enumeration>-->
+<!--							</Vocabulary>-->
+<!--						</ValueScheme>-->
+<!--					</Element>-->
+<!--					<Element name="agent" ConceptLink="http://www.w3.org/ns/prov#Agent" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="startedAtTime" ConceptLink="http://www.w3.org/ns/prov#startedAtTime" ValueScheme="dateTime" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="endedAtTime" ConceptLink="http://www.w3.org/ns/prov#endedAtTime" ValueScheme="dateTime" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="noteReconstruction" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--				</Component>-->
+<!--				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
+<!--						<ValueScheme>-->
+<!--							<Vocabulary>-->
+<!--								<enumeration>-->
+<!--									<item ConceptLink="" AppInfo="">Certain</item>-->
+<!--									<item ConceptLink="" AppInfo="">Conjecture</item>-->
+<!--									<item ConceptLink="" AppInfo="">Uncertain</item>-->
+<!--									<item ConceptLink="" AppInfo="">Unknown</item>-->
+<!--								</enumeration>-->
+<!--							</Vocabulary>-->
+<!--						</ValueScheme>-->
+<!--					</Element>-->
+<!--					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--				</Component>-->
 			</Component>
 		</Component>
 		<Component name="SeeAlso" ComponentRef="clarin.eu:cr1:c_1772521921738" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
