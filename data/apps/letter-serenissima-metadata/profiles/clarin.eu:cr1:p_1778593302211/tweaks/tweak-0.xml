@@ -12,9 +12,9 @@
 		<Element name="project">
 			<clariah:explanation src="documentation"/>
 		</Element>
-		<Component name="Identifier" cue:collapse="yes">
+		<Component name="Identifiers" cue:collapse="yes">
 			<clariah:label xml:lang="en">Letter identifier(s)</clariah:label>
-<!--			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to:  	https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>-->
+<!--			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier</Documentation>-->
 			<Element name="identifierType">
 				<clariah:explanation src="documentation"/>
 			</Element>
@@ -491,7 +491,70 @@
 				</Component>
 			</Component>
 		</Component>
+		<Component name="MentionedPerson" cue:collapse="yes">
+<!--			<Documentation>The MENTION: a CER4 Index Information instance (cidoc:E33 Linguistic Object).        This is the textual conceptualization of the person in the letter, attached to the Lettertext via P5 has_component (cidoc:P148).</Documentation>-->
+<!--			<Component name="LabelObserved">-->
+<!--				<Element name="labelAsWritten">-->
+<!--					<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>-->
+<!--				</Element>-->
+<!--				<Component name="Confidence">-->
+<!--					<Element name="confidenceValue">-->
+<!--						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+<!--				</Component>-->
+<!--			</Component>-->
+			<Component name="LinkToReconstruction">
+				<Component name="Relationship">
+					<clariah:label xml:lang="en">Link</clariah:label>
+					<Element name="to" cue:class="skosType">
+						<clariah:label xml:lang="en">Link to person</clariah:label>
+						<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
+						<clariah:explanation src="documentation"/>
+					</Element>
+<!--					<Element name="category">-->
+<!--						<Documentation>Type of relationship.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="description">-->
+<!--						<Documentation>Description or notes clarifying the relationship.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="date">-->
+<!--						<Documentation>Date in which this relationship took place (if applicable).</Documentation>-->
+<!--					</Element>-->
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<clariah:explanation src="documentation"/>
+						</Element>
+<!--						<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+					</Component>
+				</Component>
+<!--				<Component name="ReconstructionActivity">-->
+<!--					<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>-->
+<!--					<Element name="typeActivity">-->
+<!--						<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="agent">-->
+<!--						<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="startedAtTime">-->
+<!--						<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="endedAtTime">-->
+<!--						<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="noteReconstruction">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+<!--				</Component>-->
+<!--				<Component name="Confidence">-->
+<!--					<Element name="confidenceValue">-->
+<!--						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
+
+<!--					</Element>-->
+<!--					<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+<!--				</Component>-->
+			</Component>
+		</Component>
 		<Component name="SeeAlso" cue:collapse="yes">
+			<clariah:label xml:lang="en">Resources</clariah:label>
 			<Element name="url"><!--cues--></Element>
 			<Element name="label"><!--cues--></Element>
 			<Element name="providerSource">
@@ -499,6 +562,7 @@
 			</Element>
 		</Component>
 		<Component name="Note" cue:collapse="yes">
+			<clariah:label xml:lang="en">Notes</clariah:label>
 			<Documentation>Any</Documentation>
 			<Element name="noteType">
 				<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
