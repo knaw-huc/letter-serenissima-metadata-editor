@@ -29,7 +29,7 @@
 						<enumeration>
 <!--							<item ConceptLink="" AppInfo="">CERL</item>-->
 							<item ConceptLink="" AppInfo="">EMLO</item>
-<!--							<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">LocalIdentifier</item>-->
+							<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">LocalIdentifier</item>
 <!--							<item ConceptLink="" AppInfo="">NODEGOAT</item>-->
 <!--							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>-->
 							<item ConceptLink="" AppInfo="">Shelfmark</item>
