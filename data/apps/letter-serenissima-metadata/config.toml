@@ -11,7 +11,6 @@ read="users" # or "users" or "owner"
 write="users" # or "users" or "owner"
 
 
-
 # LETTERS
 [app.prof.letter]
 prof="clarin.eu:cr1:p_1778593302211"
@@ -27,45 +26,54 @@ sort="true"
 filter="true"
 ##
 
-#[app.prof.letter.list.EMLOidentifier]
-#identifier="string(//cmdp:Identifier[cmdp:identifierType='EMLO']/cmdp:identifierValue)"
-#label="EMLO identifier"
-#sort="true"
-#filter="true"
-##
 [app.prof.letter.list.project]
 xpath="string(//cmdp:project)"
 label="Project"
 sort="true"
 filter="'select'"
 
+[app.prof.letter.list.Localidentifier]
+xpath="string(//cmdp:Identifiers[cmdp:identifierType='LocalIdentifier']/cmdp:identifierValue)"
+label="LocalId"
+sort="true"
+filter="true"
+##
+
+[app.prof.letter.list.EMLOidentifier]
+xpath="string(//cmdp:Identifiers[cmdp:identifierType='EMLO']/cmdp:identifierValue)"
+label="EMLOId"
+sort="true"
+filter="true"
+##
+
 [app.prof.letter.list.sender]
-xpath="string(//cmdp:Sending/cmdp:Sender/cmdp:LabelAsObserved/cmdp:labelAsWritten)"
-label="SenderNameAsWritten"
+#xpath="string(//cmdp:Sending/cmdp:Sender/cmdp:LabelAsObserved/cmdp:labelAsWritten)"
+xpath="string(//cmdp:Sending/cmdp:Sender/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
+label="Sender"
 sort="true"
 filter="'select'"
 ##
 [app.prof.letter.list.receiver]
-xpath="string(//cmdp:Receiving/cmdp:Receiver/cmdp:LabelAsObserved/cmdp:labelAsWritten)"
-label="ReceiverNameAsWritten"
+xpath="string(//cmdp:Receiving/cmdp:Receiver/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
+label="Receiver"
 sort="true"
 filter="'select'"
 #
 [app.prof.letter.list.letterDateSent]
-xpath="string(//cmdp:Sending/cmdp:DateSent/cmdp:LabelAsObserved/cmdp:labelAsWritten)"
-label="DateSentAsWritten"
+xpath="string(//cmdp:Sending/cmdp:DateSent/cmdp:DateNormalized/cmdp:dateStart)"
+label="Date sent"
 sort="true"
 filter="'select'"
 #
 [app.prof.letter.list.letterPlaceSent]
-xpath="string(//cmdp:Sending/cmdp:PlaceSent/cmdp:LabelAsObserved/cmdp:labelAsWritten)"
-label="PlaceSentAsWritten"
+xpath="string(//cmdp:Sending/cmdp:PlaceSent/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
+label="Place sent"
 sort="true"
 filter="'select'"
 
 [app.prof.letter.list.letterPlaceReceived]
-xpath="string(//cmdp:Receiving/cmdp:PlaceReceived/cmdp:LabelAsObserved/cmdp:labelAsWritten)"
-label="PlaceReceivedAsWritten"
+xpath="string(//cmdp:Receiving/cmdp:PlaceReceived/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
+label="Place received"
 sort="true"
 filter="'select'"
 #
@@ -93,18 +101,18 @@ label="full name"
 sort="true"
 filter="true"
 ####
-##[app.prof.person.list.dateBirth]
-##xpath="string(//cmdp:PersonData/cmdp:BirthDate/cmdp:DateReconstruction/cmdp:dateStart)"
-##label="DateBirth"
-##sort="true"
-##filter="'select'"
+[app.prof.person.list.dateBirth]
+xpath="string(//cmdp:PersonData/cmdp:BirthDate/cmdp:DateNormalized/cmdp:dateStart)"
+label="DateBirth"
+sort="true"
+filter="'select'"
 ##
-##[app.prof.person.list.dateDeath]
-##xpath="string(//cmdp:PersonData/cmdp:DeathDate/cmdp:DateReconstruction/cmdp:dateStart)"
-##label="DateDeath"
-##sort="true"
-##filter="'select'"
-###
+[app.prof.person.list.dateDeath]
+xpath="string(//cmdp:PersonData/cmdp:DeathDate/cmdp:DateNormalized/cmdp:dateStart)"
+label="DateDeath"
+sort="true"
+filter="'select'"
+#
 ####[app.prof.person.list.type]
 ####xpath="string(//cmdp:Identification/cmdp:type)"
 ####label="type"
@@ -169,3 +177,6 @@ filter="true"
 #label="edges"
 #endpoint="edges"
 #hook="edges"
+
+[app.prof.letter.html]
+style="./data/apps/letter-serenissima-metadata/resources/static/css/serenissima.css"

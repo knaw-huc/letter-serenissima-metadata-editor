@@ -30,37 +30,52 @@
             <sort>true</sort>
             <filter>'select'</filter>
           </project>
+          <Localidentifier>
+            <xpath>string(//cmdp:Identifiers[cmdp:identifierType='LocalIdentifier']/cmdp:identifierValue)</xpath>
+            <label>LocalId</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </Localidentifier>
+          <EMLOidentifier>
+            <xpath>string(//cmdp:Identifiers[cmdp:identifierType='EMLO']/cmdp:identifierValue)</xpath>
+            <label>EMLOId</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </EMLOidentifier>
           <sender>
-            <xpath>string(//cmdp:Sending/cmdp:Sender/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
-            <label>SenderNameAsWritten</label>
+            <xpath>string(//cmdp:Sending/cmdp:Sender/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)</xpath>
+            <label>Sender</label>
             <sort>true</sort>
             <filter>'select'</filter>
           </sender>
           <receiver>
-            <xpath>string(//cmdp:Receiving/cmdp:Receiver/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
-            <label>ReceiverNameAsWritten</label>
+            <xpath>string(//cmdp:Receiving/cmdp:Receiver/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)</xpath>
+            <label>Receiver</label>
             <sort>true</sort>
             <filter>'select'</filter>
           </receiver>
           <letterDateSent>
-            <xpath>string(//cmdp:Sending/cmdp:DateSent/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
-            <label>DateSentAsWritten</label>
+            <xpath>string(//cmdp:Sending/cmdp:DateSent/cmdp:DateNormalized/cmdp:dateStart)</xpath>
+            <label>Date sent</label>
             <sort>true</sort>
             <filter>'select'</filter>
           </letterDateSent>
           <letterPlaceSent>
-            <xpath>string(//cmdp:Sending/cmdp:PlaceSent/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
-            <label>PlaceSentAsWritten</label>
+            <xpath>string(//cmdp:Sending/cmdp:PlaceSent/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)</xpath>
+            <label>Place sent</label>
             <sort>true</sort>
             <filter>'select'</filter>
           </letterPlaceSent>
           <letterPlaceReceived>
-            <xpath>string(//cmdp:Receiving/cmdp:PlaceReceived/cmdp:LabelAsObserved/cmdp:labelAsWritten)</xpath>
-            <label>PlaceReceivedAsWritten</label>
+            <xpath>string(//cmdp:Receiving/cmdp:PlaceReceived/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)</xpath>
+            <label>Place received</label>
             <sort>true</sort>
             <filter>'select'</filter>
           </letterPlaceReceived>
         </list>
+        <html>
+          <style>./data/apps/letter-serenissima-metadata/resources/static/css/serenissima.css</style>
+        </html>
       </letter>
       <person>
         <prof>clarin.eu:cr1:p_1758888743558</prof>
@@ -80,6 +95,18 @@
             <sort>true</sort>
             <filter>true</filter>
           </name>
+          <dateBirth>
+            <xpath>string(//cmdp:PersonData/cmdp:BirthDate/cmdp:DateNormalized/cmdp:dateStart)</xpath>
+            <label>DateBirth</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </dateBirth>
+          <dateDeath>
+            <xpath>string(//cmdp:PersonData/cmdp:DeathDate/cmdp:DateNormalized/cmdp:dateStart)</xpath>
+            <label>DateDeath</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </dateDeath>
         </list>
       </person>
       <place>
