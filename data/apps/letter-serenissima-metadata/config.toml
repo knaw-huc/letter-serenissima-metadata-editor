@@ -178,5 +178,5 @@ filter="true"
 #endpoint="edges"
 #hook="edges"
 
-[app.prof.letter.html]
-style="./data/apps/letter-serenissima-metadata/resources/static/css/serenissima.css"
+[app.html]
+style="serenissima.css"
