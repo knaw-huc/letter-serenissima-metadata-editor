@@ -276,7 +276,7 @@
 		</Component>
 		<Component name="Receiving" ConceptLink="https://lod.academy/cer/vocab/ontology#14_Receiving" CardinalityMin="1" CardinalityMax="1">
 			<Documentation>"This class comprises the receiving process of correspondence items involving at least two persons. It has been adapted from the TEI standard for correspondences, specifically drawing from the correspAction element. The aim of this class is to supply information concerning the receipt of a message."</Documentation>
-			<Component name="Receiver" ConceptLink="https://lod.academy/cer/vocab/ontology#17_Person" CardinalityMin="0" CardinalityMax="unbounded">
+			<Component name="Receiver" ConceptLink="https://lod.academy/cer/vocab/ontology#17_Person" CardinalityMin="1" CardinalityMax="unbounded">
 <!--				<Component name="LabelAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">-->
 <!--					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
 <!--						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>-->
