@@ -81,6 +81,23 @@ filter="'select'"
 #prof="clarin.eu:cr1:p_1758888743558"
 #title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
 #
+
+# LETTERS SIMPLE FORMAT TEST
+[app.prof.lettersimple]
+prof="clarin.eu:cr1:p_1784045962467"
+entity="//cmdp:LetterSimple"
+label_en="letterSimple"
+label_plural_en="lettersSimple"
+title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+
+[app.prof.lettersimple.list.nr]
+xpath="replace(//*:MdSelfLink,'unl://','')"
+label="nr"
+sort="true"
+filter="true"
+
+
+
 ## PERSONS
 [app.prof.person]
 prof="clarin.eu:cr1:p_1758888743558"

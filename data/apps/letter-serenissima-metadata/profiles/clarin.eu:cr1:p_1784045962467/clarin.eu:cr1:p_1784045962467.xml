@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header>
+		<ID>clarin.eu:cr1:p_1784045962467</ID>
+		<Name>LetterSimpleFormat</Name>
+		<Description>A test profile to see if we can simplify the template for letter metadata with schema.org.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="LetterSimpleFormat" CardinalityMin="1" CardinalityMax="1">
+		<Documentation>Test</Documentation>
+		<Component name="Sender" ConceptLink="https://schema.org/sender" CardinalityMin="1" CardinalityMax="1">
+			<Element name="senderAsWritten" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			<Element name="personLink" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+		</Component>
+		<Component name="Recipient" ConceptLink="https://schema.org/toRecipient" CardinalityMin="1" CardinalityMax="1">
+			<Element name="recipientAsWritten" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			<Element name="personLink" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+		</Component>
+		<Component name="DateSent" ConceptLink="https://schema.org/dateSent" CardinalityMin="1" CardinalityMax="1">
+			<Element name="dateAsWritten" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+			<Element name="dateNormalised" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		</Component>
+		<Component name="DateReceived" CardinalityMin="1" CardinalityMax="1">
+			<Element name="dateAsWritten" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			<Element name="dateNormalised" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		</Component>
+	</Component>
+</ComponentSpec>

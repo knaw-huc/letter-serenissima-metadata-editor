@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1784045962467</ID>
+		<Name>LetterSimpleFormat</Name>
+		<Description>A test profile to see if we can simplify the template for letter metadata with schema.org.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="LetterSimpleFormat">
+		<Documentation>Test</Documentation>
+		<Component name="Sender">
+			<Element name="senderAsWritten"></Element>
+			<Element name="personLink" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
+			</Element>
+		</Component>
+		<Component name="Recipient">
+			<Element name="recipientAsWritten"><!--cues--></Element>
+			<Element name="personLink" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
+			</Element>
+		</Component>
+		<Component name="DateSent">
+			<Element name="dateAsWritten"><!--cues--></Element>
+			<Element name="dateNormalised"><!--cues--></Element>
+		</Component>
+		<Component name="DateReceived">
+			<Element name="dateAsWritten"><!--cues--></Element>
+			<Element name="dateNormalised"><!--cues--></Element>
+		</Component>
+	</Component>
+</ComponentSpec>
