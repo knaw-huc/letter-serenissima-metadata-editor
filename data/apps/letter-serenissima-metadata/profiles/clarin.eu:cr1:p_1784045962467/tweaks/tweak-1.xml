@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1784045962467</ID>
+		<Name>LetterSimpleFormat</Name>
+		<Description>A test profile to see if we can simplify the template for letter metadata with schema.org.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="LetterSimpleFormat">
+		<clariah:explanation src="documentation"/>
+		<Element name="project">
+			
+		</Element>
+		<Component name="Identifiers">
+			<clariah:explanation src="documentation"/>
+			<clariah:label xml:lang="en">Letter identifier(s)</clariah:label>
+			<Element name="identifierType">
+				<clariah:explanation src="documentation"/>
+				
+			</Element>
+			<Element name="identifierValue">
+				<clariah:explanation src="documentation"/>
+			</Element>
+			<Element name="identifierUri">
+				<clariah:explanation src="documentation"/>
+			</Element>
+		</Component>
+		<Element name="sender">
+			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
+		</Element>
+		<Element name="dateSent"><!--cues--></Element>
+		<Element name="senderLocation">
+			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
+		</Element>
+		<Element name="recipient">
+			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
+		</Element>
+		<Element name="recipientLocation">
+			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
+		</Element>
+		<Element name="summary" cue:inputWidth="60" cue:inputHeight="8">
+		</Element>
+		<Component name="MentionedPerson">
+			<Element name="personLink">
+				<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
+			</Element>
+			<Element name="note"><!--cues--></Element>
+		</Component>
+		<Component name="SeeAlso">
+			<Element name="url"><!--cues--></Element>
+			<Element name="label"><!--cues--></Element>
+			<Element name="providerSource">
+				<clariah:explanation src="documentation"/>
+			</Element>
+		</Component>
+		<Component name="Note">
+			<clariah:label xml:lang="en">Note</clariah:label>
+			<Element name="noteType">
+				<clariah:explanation src="documentation"/>
+			</Element>
+			<Element name="noteContent" cue:inputWidth="60" cue:inputHeight="8">
+			</Element>
+		</Component>
+	</Component>
+</ComponentSpec>
