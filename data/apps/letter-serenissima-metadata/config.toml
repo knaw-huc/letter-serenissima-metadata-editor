@@ -96,7 +96,55 @@ label="nr"
 sort="true"
 filter="true"
 
+[app.prof.lettersimple.list.project]
+xpath="string(//cmdp:project)"
+label="Project"
+sort="true"
+filter="'select'"
 
+[app.prof.lettersimple.list.Localidentifier]
+xpath="string(//cmdp:Identifiers[cmdp:identifierType='LocalIdentifier']/cmdp:identifierValue)"
+label="LocalId"
+sort="true"
+filter="true"
+##
+
+[app.prof.lettersimple.list.EMLOidentifier]
+xpath="string(//cmdp:Identifiers[cmdp:identifierType='EMLO']/cmdp:identifierValue)"
+label="EMLOId"
+sort="true"
+filter="true"
+##
+
+[app.prof.lettersimple.list.sender]
+xpath="string(//cmdp:sender)"
+label="Sender"
+sort="true"
+filter="'select'"
+##
+[app.prof.lettersimple.list.receiver]
+xpath="string(//cmdp:receiver)"
+label="Receiver"
+sort="true"
+filter="'select'"
+#
+[app.prof.lettersimple.list.dateSent]
+xpath="string(//cmdp:dateSent)"
+label="Date sent"
+sort="true"
+filter="'select'"
+#
+[app.prof.lettersimple.list.placeSent]
+xpath="string(//cmdp:senderLocation)"
+label="Place sent"
+sort="true"
+filter="'select'"
+#
+[app.prof.lettersimple.list.placeReceived]
+xpath="string(//cmdp:receiverLocation)"
+label="Place received"
+sort="true"
+filter="'select'"
 
 ## PERSONS
 [app.prof.person]
@@ -159,7 +207,7 @@ filter="'select'"
 prof="clarin.eu:cr1:p_1761816151568"
 label_en="place"
 label_plural_en="places"
-title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+title="string(//cmdp:PlaceName/cmdp:preferredName)"
 #html="person-toHTML.xsl"
 
 [app.prof.place.list.nr]

@@ -87,6 +87,54 @@
             <sort>true</sort>
             <filter>true</filter>
           </nr>
+          <project>
+            <xpath>string(//cmdp:project)</xpath>
+            <label>Project</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </project>
+          <Localidentifier>
+            <xpath>string(//cmdp:Identifiers[cmdp:identifierType='LocalIdentifier']/cmdp:identifierValue)</xpath>
+            <label>LocalId</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </Localidentifier>
+          <EMLOidentifier>
+            <xpath>string(//cmdp:Identifiers[cmdp:identifierType='EMLO']/cmdp:identifierValue)</xpath>
+            <label>EMLOId</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </EMLOidentifier>
+          <sender>
+            <xpath>string(//cmdp:sender)</xpath>
+            <label>Sender</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </sender>
+          <receiver>
+            <xpath>string(//cmdp:receiver)</xpath>
+            <label>Receiver</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </receiver>
+          <dateSent>
+            <xpath>string(//cmdp:dateSent)</xpath>
+            <label>Date sent</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </dateSent>
+          <placeSent>
+            <xpath>string(//cmdp:senderLocation)</xpath>
+            <label>Place sent</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </placeSent>
+          <placeReceived>
+            <xpath>string(//cmdp:receiverLocation)</xpath>
+            <label>Place received</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </placeReceived>
         </list>
       </lettersimple>
       <person>
@@ -125,7 +173,7 @@
         <prof>clarin.eu:cr1:p_1761816151568</prof>
         <label_en>place</label_en>
         <label_plural_en>places</label_plural_en>
-        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <title>string(//cmdp:PlaceName/cmdp:preferredName)</title>
         <list>
           <nr>
             <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
