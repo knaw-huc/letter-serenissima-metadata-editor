@@ -7,7 +7,7 @@
 		<Status>development</Status>
 	</Header>
 	<Component name="LetterSimpleFormat" CardinalityMin="1" CardinalityMax="1">
-		<Documentation>Test</Documentation>
+<!--		<Documentation>Letter Serenissima metadata Editor</Documentation>-->
 		<Element name="project" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 			<ValueScheme>
 				<Vocabulary>
@@ -18,7 +18,7 @@
 				</Vocabulary>
 			</ValueScheme>
 		</Element>
-		<Component name="Identifiers" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" CardinalityMin="1" CardinalityMax="1">
+		<Component name="Identifiers" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" CardinalityMin="1" CardinalityMax="unbounded">
 			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
 			<Element name="identifierType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 				<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
@@ -48,8 +48,8 @@
 		<Element name="sender" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="2" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 		<Element name="dateSent" ConceptLink="https://schema.org/dateSent" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 		<Element name="senderLocation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-		<Element name="recipient" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="4" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-		<Element name="recipientLocation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="5" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="receiver" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="4" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="receiverLocation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="5" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 		<Element name="summary" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="6" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 		<Component name="MentionedPerson" CardinalityMin="0" CardinalityMax="unbounded">
 			<Element name="personLink" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
