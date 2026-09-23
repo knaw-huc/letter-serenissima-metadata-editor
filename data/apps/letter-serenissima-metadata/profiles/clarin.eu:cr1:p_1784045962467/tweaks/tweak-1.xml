@@ -8,20 +8,18 @@
 	<Component name="LetterSimpleFormat">
 		<clariah:explanation src="documentation"/>
 		<Element name="project">
-			
 		</Element>
 		<Component name="Identifiers">
-			<clariah:explanation src="documentation"/>
+<!--			<clariah:explanation src="documentation"/>-->
 			<clariah:label xml:lang="en">Letter identifier(s)</clariah:label>
 			<Element name="identifierType">
-				<clariah:explanation src="documentation"/>
-				
+<!--				<clariah:explanation> Test </clariah:explanation>-->
 			</Element>
 			<Element name="identifierValue">
-				<clariah:explanation src="documentation"/>
+<!--				<clariah:explanation src="documentation"/>-->
 			</Element>
 			<Element name="identifierUri">
-				<clariah:explanation src="documentation"/>
+<!--				<clariah:explanation>The (hopefully) permanent identifier URI. EMLO doesn't have PIDs, use for example: https://emlo-collect.bodleian.ox.ac.uk/work/work/edit/5eff11e9a9ca48060079ed02 </clariah:explanation>-->
 			</Element>
 		</Component>
 		<Element name="sender">
@@ -31,10 +29,10 @@
 		<Element name="senderLocation">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
 		</Element>
-		<Element name="recipient">
+		<Element name="receiver">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
 		</Element>
-		<Element name="recipientLocation">
+		<Element name="receiverLocation">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
 		</Element>
 		<Element name="summary" cue:inputWidth="60" cue:inputHeight="8">
