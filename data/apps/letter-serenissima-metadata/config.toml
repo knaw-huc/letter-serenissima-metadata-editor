@@ -152,7 +152,7 @@ prof="clarin.eu:cr1:p_1758888743558"
 #entity="//cmdp:Person"
 label_en="person"
 label_plural_en="persons"
-title="string(//cmdp:PersonNamePreferred/cmdp:LabelNormalised/cmdp:fullName)"
+title="string(//cmdp:PersonNamePreferred/cmdp:fullName)"
 
 [app.prof.person.list.nr]
 xpath="replace(//*:MdSelfLink,'unl://','')"

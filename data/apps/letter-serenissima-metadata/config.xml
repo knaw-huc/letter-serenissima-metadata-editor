@@ -141,7 +141,7 @@
         <prof>clarin.eu:cr1:p_1758888743558</prof>
         <label_en>person</label_en>
         <label_plural_en>persons</label_plural_en>
-        <title>string(//cmdp:PersonNamePreferred/cmdp:LabelNormalised/cmdp:fullName)</title>
+        <title>string(//cmdp:PersonNamePreferred/cmdp:fullName)</title>
         <list>
           <nr>
             <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
