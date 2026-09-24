@@ -64,7 +64,7 @@
 			<Element name="personLink" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 			<Element name="note" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
 		</Component>
-		<Component name="Note" ComponentRef="clarin.eu:cr1:c_1778593302212" ConceptLink="" CardinalityMin="0" CardinalityMax="1">
+		<Component name="Note" ComponentRef="clarin.eu:cr1:c_1778593302212" ConceptLink="" CardinalityMin="1" CardinalityMax="unbounded">
 			<Documentation>Any</Documentation>
 			<Element name="noteType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 				<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>

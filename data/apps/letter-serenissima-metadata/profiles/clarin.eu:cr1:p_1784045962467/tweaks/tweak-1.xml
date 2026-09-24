@@ -39,7 +39,7 @@
 		<Element name="summary" cue:inputWidth="60" cue:inputHeight="8">
 		</Element>
 		<Component name="MentionedPerson">
-			<Element name="personLink">
+			<Element name="personLink" cue:class="skosType">
 				<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
 			</Element>
 			<Element name="note"><!--cues--></Element>
