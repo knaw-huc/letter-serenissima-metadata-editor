@@ -161,7 +161,7 @@ sort="true"
 filter="true"
 
 [app.prof.person.list.name]
-xpath="string(//cmdp:PersonNamePreferred/cmdp:LabelNormalised/cmdp:fullName)"
+xpath="string(//cmdp:PersonNamePreferred/cmdp:fullName)"
 label="full name"
 sort="true"
 filter="true"
@@ -196,11 +196,11 @@ filter="'select'"
 ###sort="true"
 ###filter="'select'"
 ##
-##[app.prof.person.list.identifier2]
-##xpath="string((//cmdp:identifierType[@xml:lang='en'],//cmdp:identifierLabel)[2])"
-##label="WikidataId"
-##sort="true"
-##filter="'select'"
+[app.prof.person.list.identifier2]
+xpath="string(//cmdp:Identifiers[cmdp:identifierType='Wikidata']/cmdp:identifierValue)"
+label="WikidataId"
+sort="true"
+filter="'select'"
 ###
 ## PLACE RECONSTRUCTIONS
 [app.prof.place]

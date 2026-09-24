@@ -150,7 +150,7 @@
             <filter>true</filter>
           </nr>
           <name>
-            <xpath>string(//cmdp:PersonNamePreferred/cmdp:LabelNormalised/cmdp:fullName)</xpath>
+            <xpath>string(//cmdp:PersonNamePreferred/cmdp:fullName)</xpath>
             <label>full name</label>
             <sort>true</sort>
             <filter>true</filter>
@@ -167,6 +167,12 @@
             <sort>true</sort>
             <filter>'select'</filter>
           </dateDeath>
+          <identifier2>
+            <xpath>string(//cmdp:Identifiers[cmdp:identifierType='Wikidata']/cmdp:identifierValue)</xpath>
+            <label>WikidataId</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </identifier2>
         </list>
       </person>
       <place>
