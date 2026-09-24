@@ -22,14 +22,14 @@
 <!--				<clariah:explanation>The (hopefully) permanent identifier URI. EMLO doesn't have PIDs, use for example: https://emlo-collect.bodleian.ox.ac.uk/work/work/edit/5eff11e9a9ca48060079ed02 </clariah:explanation>-->
 			</Element>
 		</Component>
-		<Element name="sender">
+		<Element name="sender" cue:class="skosType">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
 		</Element>
 		<Element name="dateSent"><!--cues--></Element>
 		<Element name="senderLocation" cue:class="skosType">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
 		</Element>
-		<Element name="receiver">
+		<Element name="receiver" cue:class="skosType">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
 		</Element>
 		<Element name="dateReceived"><!--cues--></Element>
