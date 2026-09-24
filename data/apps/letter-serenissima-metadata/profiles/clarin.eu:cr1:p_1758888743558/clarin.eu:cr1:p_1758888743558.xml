@@ -153,28 +153,6 @@
 		<Component name="PersonData" ComponentRef="clarin.eu:cr1:c_1761816151573" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
 <!--			<Documentation>https://www.personsincontext.org/model/#Persons-in-Context-&#45;&#45;Datatype-Properties</Documentation>-->
 			<Component name="BirthDate" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E67_Birth" CardinalityMin="1" CardinalityMax="1">
-<!--				<Documentation>For PiCo: https://schema.org/birthDate</Documentation>-->
-<!--				<Component name="LabelObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">-->
-<!--					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>-->
-<!--					</Element>-->
-<!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
-<!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
-<!--							<ValueScheme>-->
-<!--								<Vocabulary>-->
-<!--									<enumeration>-->
-<!--										<item ConceptLink="" AppInfo="">Certain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Conjecture</item>-->
-<!--										<item ConceptLink="" AppInfo="">Uncertain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Unknown</item>-->
-<!--									</enumeration>-->
-<!--								</Vocabulary>-->
-<!--							</ValueScheme>-->
-<!--						</Element>-->
-<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--					</Component>-->
-<!--				</Component>-->
 				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
 					<Documentation>For complete dates or date ranges use: YYYY-MM-DD. Example: 2025-07-17 (17 July 2025). For uncertain dates or date ranges, use these rules: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
 					<Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
@@ -198,47 +176,9 @@
 					<Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
 					</Element>
-<!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
-<!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
-<!--							<ValueScheme>-->
-<!--								<Vocabulary>-->
-<!--									<enumeration>-->
-<!--										<item ConceptLink="" AppInfo="">Certain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Conjecture</item>-->
-<!--										<item ConceptLink="" AppInfo="">Uncertain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Unknown</item>-->
-<!--									</enumeration>-->
-<!--								</Vocabulary>-->
-<!--							</ValueScheme>-->
-<!--						</Element>-->
-<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--					</Component>-->
 				</Component>
 			</Component>
 			<Component name="DeathDate" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E69_Death" CardinalityMin="1" CardinalityMax="1">
-<!--				<Documentation>For PiCo: https://schema.org/deathDate</Documentation>-->
-<!--				<Component name="LabelObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">-->
-<!--					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>-->
-<!--					</Element>-->
-<!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
-<!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
-<!--							<ValueScheme>-->
-<!--								<Vocabulary>-->
-<!--									<enumeration>-->
-<!--										<item ConceptLink="" AppInfo="">Certain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Conjecture</item>-->
-<!--										<item ConceptLink="" AppInfo="">Uncertain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Unknown</item>-->
-<!--									</enumeration>-->
-<!--								</Vocabulary>-->
-<!--							</ValueScheme>-->
-<!--						</Element>-->
-<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--					</Component>-->
-<!--				</Component>-->
 				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
 					<Documentation>For complete dates or date ranges use: YYYY-MM-DD. Example: 2025-07-17 (17 July 2025). For uncertain dates or date ranges, use these rules: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
 					<Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
@@ -262,47 +202,10 @@
 					<Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
 					</Element>
-<!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
-<!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
-<!--							<ValueScheme>-->
-<!--								<Vocabulary>-->
-<!--									<enumeration>-->
-<!--										<item ConceptLink="" AppInfo="">Certain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Conjecture</item>-->
-<!--										<item ConceptLink="" AppInfo="">Uncertain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Unknown</item>-->
-<!--									</enumeration>-->
-<!--								</Vocabulary>-->
-<!--							</ValueScheme>-->
-<!--						</Element>-->
-<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--					</Component>-->
 				</Component>
 			</Component>
 			<Component name="FloruitPeriods" CardinalityMin="0" CardinalityMax="unbounded">
 				<Documentation>This component is used to record the dates of the documented period of activity/flourishing of the documented person. It's also used for life "hints" (years when a person was known to be active). See also: https://docs.swissartresearch.net/et/persons/</Documentation>
-				<Component name="DateObservation" ComponentRef="clarin.eu:cr1:c_1761816151575" CardinalityMin="1" CardinalityMax="1">
-					<Element name="dateAsWritten" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Enter the date exactly as it is written in the source (trascription or extraction), but not yet normalized.</Documentation>
-					</Element>
-<!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
-<!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
-<!--							<ValueScheme>-->
-<!--								<Vocabulary>-->
-<!--									<enumeration>-->
-<!--										<item ConceptLink="" AppInfo="">Certain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Conjecture</item>-->
-<!--										<item ConceptLink="" AppInfo="">Uncertain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Unknown</item>-->
-<!--									</enumeration>-->
-<!--								</Vocabulary>-->
-<!--							</ValueScheme>-->
-<!--						</Element>-->
-<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--					</Component>-->
-				</Component>
 				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
 					<Documentation>For complete dates or date ranges use: YYYY-MM-DD. Example: 2025-07-17 (17 July 2025). For uncertain dates or date ranges, use these rules: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
 					<Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
@@ -326,22 +229,6 @@
 					<Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
 					</Element>
-<!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
-<!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
-<!--							<ValueScheme>-->
-<!--								<Vocabulary>-->
-<!--									<enumeration>-->
-<!--										<item ConceptLink="" AppInfo="">Certain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Conjecture</item>-->
-<!--										<item ConceptLink="" AppInfo="">Uncertain</item>-->
-<!--										<item ConceptLink="" AppInfo="">Unknown</item>-->
-<!--									</enumeration>-->
-<!--								</Vocabulary>-->
-<!--							</ValueScheme>-->
-<!--						</Element>-->
-<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--					</Component>-->
 				</Component>
 			</Component>
 			<Component name="BirthPlace" ConceptLink="https://schema.org/birthPlace" CardinalityMin="1" CardinalityMax="1">
@@ -600,78 +487,6 @@
 				</Component>
 			</Component>
 		</Component>
-<!--		<Component name="LinkToReconstruction" ComponentRef="clarin.eu:cr1:c_1761816151566" CardinalityMin="1" CardinalityMax="1">-->
-<!--			<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">-->
-<!--				<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--					<Documentation>Link to the entity in the other CMDI profile.</Documentation>-->
-<!--				</Element>-->
-<!--				<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--					<Documentation>Type of relationship.</Documentation>-->
-<!--				</Element>-->
-<!--				<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--					<Documentation>Description or notes clarifying the relationship.</Documentation>-->
-<!--				</Element>-->
-<!--				<Element name="date" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--					<Documentation>Date in which this relationship took place (if applicable).</Documentation>-->
-<!--				</Element>-->
-<!--				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
-<!--					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
-<!--						<ValueScheme>-->
-<!--							<Vocabulary>-->
-<!--								<enumeration>-->
-<!--									<item ConceptLink="" AppInfo="">Certain</item>-->
-<!--									<item ConceptLink="" AppInfo="">Conjecture</item>-->
-<!--									<item ConceptLink="" AppInfo="">Uncertain</item>-->
-<!--									<item ConceptLink="" AppInfo="">Unknown</item>-->
-<!--								</enumeration>-->
-<!--							</Vocabulary>-->
-<!--						</ValueScheme>-->
-<!--					</Element>-->
-<!--					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--				</Component>-->
-<!--			</Component>-->
-<!--			<Component name="ReconstructionActivity" CardinalityMin="1" CardinalityMax="1">-->
-<!--				<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>-->
-<!--				<Element name="typeActivity" CardinalityMin="1" CardinalityMax="1">-->
-<!--					<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>-->
-<!--					<ValueScheme>-->
-<!--						<Vocabulary>-->
-<!--							<enumeration>-->
-<!--								<item>reconciliation</item>-->
-<!--								<item>close-reading</item>-->
-<!--							</enumeration>-->
-<!--						</Vocabulary>-->
-<!--					</ValueScheme>-->
-<!--				</Element>-->
-<!--				<Element name="agent" ConceptLink="http://www.w3.org/ns/prov#Agent" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--					<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>-->
-<!--				</Element>-->
-<!--				<Element name="startedAtTime" ConceptLink="http://www.w3.org/ns/prov#startedAtTime" ValueScheme="dateTime" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--					<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>-->
-<!--				</Element>-->
-<!--				<Element name="endedAtTime" ConceptLink="http://www.w3.org/ns/prov#endedAtTime" ValueScheme="dateTime" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--					<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>-->
-<!--				</Element>-->
-<!--				<Element name="noteReconstruction" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--			</Component>-->
-<!--			<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
-<!--				<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
-<!--					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
-<!--					<ValueScheme>-->
-<!--						<Vocabulary>-->
-<!--							<enumeration>-->
-<!--								<item ConceptLink="" AppInfo="">Certain</item>-->
-<!--								<item ConceptLink="" AppInfo="">Conjecture</item>-->
-<!--								<item ConceptLink="" AppInfo="">Uncertain</item>-->
-<!--								<item ConceptLink="" AppInfo="">Unknown</item>-->
-<!--							</enumeration>-->
-<!--						</Vocabulary>-->
-<!--					</ValueScheme>-->
-<!--				</Element>-->
-<!--				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
-<!--			</Component>-->
-<!--		</Component>-->
 		<Component name="SeeAlso" ComponentRef="clarin.eu:cr1:c_1772521921738" ConceptLink="" CardinalityMin="0" CardinalityMax="unbounded">
 			<Element name="url" ConceptLink="http://www.w3.org/2000/01/rdf-schema#seeAlso" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 			<Element name="label" ConceptLink="http://www.w3.org/2000/01/rdf-schema#label" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
@@ -687,7 +502,18 @@
 					<Vocabulary>
 						<enumeration>
 							<item>generalNote</item>
-							<item>biographicalNote</item>
+							<item>biographic-birthDate</item>
+							<item>biographic-general</item>
+							<item>biographic-roles</item>
+							<item>birth-year-certainty</item>
+							<item>comment</item>
+							<item>dates-comment</item>
+							<item>death-year-certainty</item>
+							<item>editor-note</item>
+							<item>reference-archival</item>
+							<item>reference-bibliographic</item>
+							<item>reference-other</item>
+							<item>scope</item>
 						</enumeration>
 					</Vocabulary>
 				</ValueScheme>
