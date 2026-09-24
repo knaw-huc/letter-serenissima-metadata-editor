@@ -26,14 +26,14 @@
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
 		</Element>
 		<Element name="dateSent"><!--cues--></Element>
-		<Element name="senderLocation">
+		<Element name="senderLocation" cue:class="skosType">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
 		</Element>
 		<Element name="receiver">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1758888743558/entity/person</clariah:autoCompleteURI>
 		</Element>
 		<Element name="dateReceived"><!--cues--></Element>
-		<Element name="receiverLocation">
+		<Element name="receiverLocation" cue:class="skosType">
 			<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
 		</Element>
 		<Element name="summary" cue:inputWidth="60" cue:inputHeight="8">
