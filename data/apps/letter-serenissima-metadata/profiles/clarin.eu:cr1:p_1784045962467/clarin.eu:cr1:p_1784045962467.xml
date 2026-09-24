@@ -25,15 +25,16 @@
 				<ValueScheme>
 					<Vocabulary>
 						<enumeration>
-							<!--							<item ConceptLink="" AppInfo="">CERL</item>-->
+<!--							<item ConceptLink="" AppInfo="">CERL</item>-->
 							<item ConceptLink="" AppInfo="">EMLO</item>
 							<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">LocalIdentifier</item>
-							<!--							<item ConceptLink="" AppInfo="">NODEGOAT</item>-->
-							<!--							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>-->
+<!--							<item ConceptLink="" AppInfo="">NODEGOAT</item>-->
+<!--							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>-->
 							<item ConceptLink="" AppInfo="">Shelfmark</item>
-							<!--							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>-->
-							<!--							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>-->
-							<item ConceptLink="" AppInfo="">Other</item>
+<!--							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>-->
+<!--							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>-->
+							<item>Other</item>
+<!--							<item ConceptLink="https://sws.geonames.org">Geonames</item>-->
 						</enumeration>
 					</Vocabulary>
 				</ValueScheme>
@@ -45,22 +46,23 @@
 				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
 			</Element>
 		</Component>
-		<Element name="sender" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="2" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-		<Element name="dateSent" ConceptLink="https://schema.org/dateSent" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-		<Element name="senderLocation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-		<Element name="receiver" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="4" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-		<Element name="receiverLocation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="5" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-		<Element name="summary" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="6" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-		<Component name="MentionedPerson" CardinalityMin="0" CardinalityMax="unbounded">
-			<Element name="personLink" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" cue:class="skosType" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-			<Element name="note" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-		</Component>
+		<Element name="sender" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="dateSent" ConceptLink="https://schema.org/dateSent" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="senderLocation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="receiver" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="dateReceived" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="6" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="receiverLocation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="7" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="summary" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="8" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 		<Component name="SeeAlso" ComponentRef="clarin.eu:cr1:c_1772521921738" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
 			<Element name="url" ConceptLink="http://www.w3.org/2000/01/rdf-schema#seeAlso" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 			<Element name="label" ConceptLink="http://www.w3.org/2000/01/rdf-schema#label" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 			<Element name="providerSource" ConceptLink="http://purl.org/dc/terms/publisher" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 				<Documentation>the name of the repository or project (e.g., "correspSearch", "Kalliope", "Deutsches Textarchiv")</Documentation>
 			</Element>
+		</Component>
+		<Component name="MentionedPerson" CardinalityMin="0" CardinalityMax="unbounded">
+			<Element name="personLink" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			<Element name="note" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
 		</Component>
 		<Component name="Note" ComponentRef="clarin.eu:cr1:c_1778593302212" ConceptLink="" CardinalityMin="0" CardinalityMax="1">
 			<Documentation>Any</Documentation>
