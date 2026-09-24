@@ -11,82 +11,82 @@ read="users" # or "users" or "owner"
 write="users" # or "users" or "owner"
 
 
-# LETTERS
-[app.prof.letter]
-prof="clarin.eu:cr1:p_1778593302211"
-entity="//cmdp:Letter"
-label_en="letter"
-label_plural_en="letters"
-title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-
-[app.prof.letter.list.nr]
-xpath="replace(//*:MdSelfLink,'unl://','')"
-label="nr"
-sort="true"
-filter="true"
-##
-
-[app.prof.letter.list.project]
-xpath="string(//cmdp:project)"
-label="Project"
-sort="true"
-filter="'select'"
-
-[app.prof.letter.list.Localidentifier]
-xpath="string(//cmdp:Identifiers[cmdp:identifierType='LocalIdentifier']/cmdp:identifierValue)"
-label="LocalId"
-sort="true"
-filter="true"
-##
-
-[app.prof.letter.list.EMLOidentifier]
-xpath="string(//cmdp:Identifiers[cmdp:identifierType='EMLO']/cmdp:identifierValue)"
-label="EMLOId"
-sort="true"
-filter="true"
-##
-
-[app.prof.letter.list.sender]
-#xpath="string(//cmdp:Sending/cmdp:Sender/cmdp:LabelAsObserved/cmdp:labelAsWritten)"
-xpath="string(//cmdp:Sending/cmdp:Sender/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
-label="Sender"
-sort="true"
-filter="'select'"
-##
-[app.prof.letter.list.receiver]
-xpath="string(//cmdp:Receiving/cmdp:Receiver/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
-label="Receiver"
-sort="true"
-filter="'select'"
-#
-[app.prof.letter.list.letterDateSent]
-xpath="string(//cmdp:Sending/cmdp:DateSent/cmdp:DateNormalized/cmdp:dateStart)"
-label="Date sent"
-sort="true"
-filter="'select'"
-#
-[app.prof.letter.list.letterPlaceSent]
-xpath="string(//cmdp:Sending/cmdp:PlaceSent/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
-label="Place sent"
-sort="true"
-filter="'select'"
-
-[app.prof.letter.list.letterPlaceReceived]
-xpath="string(//cmdp:Receiving/cmdp:PlaceReceived/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
-label="Place received"
-sort="true"
-filter="'select'"
-#
-#[app.prof.person]
-#prof="clarin.eu:cr1:p_1758888743558"
+## LETTERS
+#[app.prof.letter]
+#prof="clarin.eu:cr1:p_1778593302211"
+#entity="//cmdp:Letter"
+#label_en="letter"
+#label_plural_en="letters"
 #title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
 #
+#[app.prof.letter.list.nr]
+#xpath="replace(//*:MdSelfLink,'unl://','')"
+#label="nr"
+#sort="true"
+#filter="true"
+###
+#
+#[app.prof.letter.list.project]
+#xpath="string(//cmdp:project)"
+#label="Project"
+#sort="true"
+#filter="'select'"
+#
+#[app.prof.letter.list.Localidentifier]
+#xpath="string(//cmdp:Identifiers[cmdp:identifierType='LocalIdentifier']/cmdp:identifierValue)"
+#label="LocalId"
+#sort="true"
+#filter="true"
+###
+#
+#[app.prof.letter.list.EMLOidentifier]
+#xpath="string(//cmdp:Identifiers[cmdp:identifierType='EMLO']/cmdp:identifierValue)"
+#label="EMLOId"
+#sort="true"
+#filter="true"
+###
+#
+#[app.prof.letter.list.sender]
+##xpath="string(//cmdp:Sending/cmdp:Sender/cmdp:LabelAsObserved/cmdp:labelAsWritten)"
+#xpath="string(//cmdp:Sending/cmdp:Sender/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
+#label="Sender"
+#sort="true"
+#filter="'select'"
+###
+#[app.prof.letter.list.receiver]
+#xpath="string(//cmdp:Receiving/cmdp:Receiver/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
+#label="Receiver"
+#sort="true"
+#filter="'select'"
+##
+#[app.prof.letter.list.letterDateSent]
+#xpath="string(//cmdp:Sending/cmdp:DateSent/cmdp:DateNormalized/cmdp:dateStart)"
+#label="Date sent"
+#sort="true"
+#filter="'select'"
+##
+#[app.prof.letter.list.letterPlaceSent]
+#xpath="string(//cmdp:Sending/cmdp:PlaceSent/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
+#label="Place sent"
+#sort="true"
+#filter="'select'"
+#
+#[app.prof.letter.list.letterPlaceReceived]
+#xpath="string(//cmdp:Receiving/cmdp:PlaceReceived/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)"
+#label="Place received"
+#sort="true"
+#filter="'select'"
+##
+##[app.prof.person]
+##prof="clarin.eu:cr1:p_1758888743558"
+##title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+##
 
 # LETTERS SIMPLE FORMAT TEST
 [app.prof.lettersimple]
 prof="clarin.eu:cr1:p_1784045962467"
 entity="//cmdp:LetterSimple"
-label_en="letterSimple"
+label_en="LETTER"
 label_plural_en="lettersSimple"
 title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
 
@@ -150,7 +150,7 @@ filter="'select'"
 [app.prof.person]
 prof="clarin.eu:cr1:p_1758888743558"
 #entity="//cmdp:Person"
-label_en="person"
+label_en="PERSON"
 label_plural_en="persons"
 title="string(//cmdp:PersonNamePreferred/cmdp:fullName)"
 
@@ -205,7 +205,7 @@ filter="'select'"
 ## PLACE RECONSTRUCTIONS
 [app.prof.place]
 prof="clarin.eu:cr1:p_1761816151568"
-label_en="place"
+label_en="PLACE"
 label_plural_en="places"
 title="string(//cmdp:PlaceName/cmdp:preferredName)"
 #html="person-toHTML.xsl"

@@ -11,73 +11,10 @@
       <write>users</write>
     </access>
     <prof>
-      <letter>
-        <prof>clarin.eu:cr1:p_1778593302211</prof>
-        <entity>//cmdp:Letter</entity>
-        <label_en>letter</label_en>
-        <label_plural_en>letters</label_plural_en>
-        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
-        <list>
-          <nr>
-            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
-            <label>nr</label>
-            <sort>true</sort>
-            <filter>true</filter>
-          </nr>
-          <project>
-            <xpath>string(//cmdp:project)</xpath>
-            <label>Project</label>
-            <sort>true</sort>
-            <filter>'select'</filter>
-          </project>
-          <Localidentifier>
-            <xpath>string(//cmdp:Identifiers[cmdp:identifierType='LocalIdentifier']/cmdp:identifierValue)</xpath>
-            <label>LocalId</label>
-            <sort>true</sort>
-            <filter>true</filter>
-          </Localidentifier>
-          <EMLOidentifier>
-            <xpath>string(//cmdp:Identifiers[cmdp:identifierType='EMLO']/cmdp:identifierValue)</xpath>
-            <label>EMLOId</label>
-            <sort>true</sort>
-            <filter>true</filter>
-          </EMLOidentifier>
-          <sender>
-            <xpath>string(//cmdp:Sending/cmdp:Sender/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)</xpath>
-            <label>Sender</label>
-            <sort>true</sort>
-            <filter>'select'</filter>
-          </sender>
-          <receiver>
-            <xpath>string(//cmdp:Receiving/cmdp:Receiver/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)</xpath>
-            <label>Receiver</label>
-            <sort>true</sort>
-            <filter>'select'</filter>
-          </receiver>
-          <letterDateSent>
-            <xpath>string(//cmdp:Sending/cmdp:DateSent/cmdp:DateNormalized/cmdp:dateStart)</xpath>
-            <label>Date sent</label>
-            <sort>true</sort>
-            <filter>'select'</filter>
-          </letterDateSent>
-          <letterPlaceSent>
-            <xpath>string(//cmdp:Sending/cmdp:PlaceSent/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)</xpath>
-            <label>Place sent</label>
-            <sort>true</sort>
-            <filter>'select'</filter>
-          </letterPlaceSent>
-          <letterPlaceReceived>
-            <xpath>string(//cmdp:Receiving/cmdp:PlaceReceived/cmdp:LinkToReconstruction/cmdp:Relationship/cmdp:to)</xpath>
-            <label>Place received</label>
-            <sort>true</sort>
-            <filter>'select'</filter>
-          </letterPlaceReceived>
-        </list>
-      </letter>
       <lettersimple>
         <prof>clarin.eu:cr1:p_1784045962467</prof>
         <entity>//cmdp:LetterSimple</entity>
-        <label_en>letterSimple</label_en>
+        <label_en>LETTER</label_en>
         <label_plural_en>lettersSimple</label_plural_en>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
         <list>
@@ -139,7 +76,7 @@
       </lettersimple>
       <person>
         <prof>clarin.eu:cr1:p_1758888743558</prof>
-        <label_en>person</label_en>
+        <label_en>PERSON</label_en>
         <label_plural_en>persons</label_plural_en>
         <title>string(//cmdp:PersonNamePreferred/cmdp:fullName)</title>
         <list>
@@ -177,7 +114,7 @@
       </person>
       <place>
         <prof>clarin.eu:cr1:p_1761816151568</prof>
-        <label_en>place</label_en>
+        <label_en>PLACE</label_en>
         <label_plural_en>places</label_plural_en>
         <title>string(//cmdp:PlaceName/cmdp:preferredName)</title>
         <list>
