@@ -10,504 +10,179 @@
 		<Status>development</Status>
 	</Header>
 	<Component name="Person">
-<!--		<clariah:explanation src="documentation"/>-->
-		<Component name="Source">
-			<clariah:explanation src="documentation"/>
-			<Element name="name">
-				<clariah:explanation src="documentation"/>
-			</Element>
-			<Element name="urlZoteroItem">
-				<clariah:explanation src="documentation"/>
-			</Element>
-			<Element name="urlPageScan">
-				<clariah:explanation src="documentation"/>
-			</Element>
-			<Element name="position">
-				<clariah:explanation src="documentation"/>
-			</Element>
-		</Component>
-		<Component name="RoleInSource">
-			<Element name="hasRole">
-				<clariah:explanation src="documentation"/>
-			</Element>
-		</Component>
+		<Documentation></Documentation>
 		<Component name="Identifiers">
-<!--			<clariah:explanation src="documentation"/>-->
+			<Documentation></Documentation>
 			<Element name="identifierType">
-				<clariah:explanation src="documentation"/>
+				<Documentation></Documentation>
+				
 			</Element>
 			<Element name="identifierValue">
-				<clariah:explanation src="documentation"/>
+				<Documentation></Documentation>
 			</Element>
 			<Element name="identifierUri">
-				<clariah:explanation src="documentation"/>
+				<Documentation></Documentation>
 			</Element>
 		</Component>
 		<Component name="PersonNamePreferred">
-			<Component name="LabelObserved">
-				<Element name="labelAsWritten">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Component name="Confidence">
-					<Element name="confidenceValue">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Element name="confidenceScore"><!--cues--></Element>
-				</Component>
-			</Component>
-			<Component name="LabelNormalised">
-				<Element name="fullName">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="nameLabelPreference">
-				</Element>
-				<Element name="nameType">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Component name="Confidence">
-					<Element name="confidenceValue">
-						<clariah:explanation src="documentation"/>
-						
-					</Element>
-					<Element name="confidenceScore"><!--cues--></Element>
-				</Component>
-			</Component>
-			<Component name="PersonNamePart">
-<!--				<clariah:explanation src="documentation"/>-->
-				<Element name="prefix">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="initials">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="givenName">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="patronym">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="givenNameSufix">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="infixTitle">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="surname">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="surnamePrefix">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="baseSurname">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="trailingPatronym">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="honorificSuffix">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="disambiguatingDescription">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Component name="Confidence">
-					<Element name="confidenceValue">
-						<clariah:explanation src="documentation"/>
-						
-					</Element>
-					<Element name="confidenceScore"><!--cues--></Element>
-				</Component>
-			</Component>
+			<Element name="fullName">
+				<Documentation></Documentation>
+			</Element>
+<!--			<Element name="nameType" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation></Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="">current-name</item>
+							<item ConceptLink="" AppInfo="">former-name</item>
+							<item ConceptLink="" AppInfo="">alias</item>
+							<item ConceptLink="" AppInfo="">birth-name</item>
+							<item ConceptLink="" AppInfo="">married-name</item>
+							<item ConceptLink="" AppInfo="">religious-name</item>
+							<item ConceptLink="" AppInfo="">nickname</item>
+							<item ConceptLink="" AppInfo="">spelling-variant</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>-->
+<!--				<Element name="prefix" ConceptLink="https://w3id.org/pnv#prefix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation></Documentation>
+			</Element>
+			<Element name="initials" ConceptLink="https://w3id.org/pnv#initials" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation></Documentation>
+			</Element>-->
+			<Element name="givenName">
+				<Documentation></Documentation>
+			</Element>
+<!--				<Element name="patronym" ConceptLink="https://w3id.org/pnv#patronym" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation></Documentation>
+			</Element>-->
+			<Element name="givenNameSufix">
+				<Documentation></Documentation>
+			</Element>
+<!--				<Element name="infixTitle" ConceptLink="https://w3id.org/pnv#infixTitle" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="7" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation></Documentation>
+			</Element>-->
+<!--				<Element name="surname" ConceptLink="https://w3id.org/pnv#surname" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="8" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation></Documentation>
+			</Element>-->
+			<Element name="surnamePrefix">
+				<Documentation></Documentation>
+			</Element>
+			<Element name="baseSurname">
+				<Documentation></Documentation>
+			</Element>
+<!--				<Element name="trailingPatronym" ConceptLink="https://w3id.org/pnv#trailingPatronym" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="11" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation></Documentation>
+			</Element>-->
+			<Element name="honorificSuffix">
+				<Documentation></Documentation>
+			</Element>
+<!--				<Element name="disambiguatingDescription" ConceptLink="https://w3id.org/pnv#disambiguatingDescription" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="13" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation></Documentation>
+			</Element>-->
 		</Component>
 		<Component name="PersonNameVariants">
-<!--			<clariah:explanation src="documentation"/>-->
-			<Component name="LabelObserved">
-				<Element name="labelAsWritten">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Component name="Confidence">
-					<Element name="confidenceValue">
-						<clariah:explanation src="documentation"/>
-						
-					</Element>
-					<Element name="confidenceScore"><!--cues--></Element>
-				</Component>
-			</Component>
-			<Component name="LabelNormalised">
-				<Element name="fullName">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="nameLabelPrefence">
-					
-				</Element>
-				<Element name="nameType">
-					<clariah:explanation src="documentation"/>
-					
-				</Element>
-				<Component name="Confidence">
-					<Element name="confidenceValue">
-						<clariah:explanation src="documentation"/>
-						
-					</Element>
-					<Element name="confidenceScore"><!--cues--></Element>
-				</Component>
-			</Component>
-			<Component name="DateNormalized">
-				<clariah:explanation src="documentation"/>
-				<Element name="dateStart">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="dateEnd">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="calendar">
-					
-				</Element>
-				<Element name="noteDate">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Component name="Confidence">
-					<Element name="confidenceValue">
-						<clariah:explanation src="documentation"/>
-						
-					</Element>
-					<Element name="confidenceScore"><!--cues--></Element>
-				</Component>
-			</Component>
+			<Documentation></Documentation>
+			<Element name="fullName">
+				<Documentation></Documentation>
+			</Element>
+			<Element name="nameLabelPrefence">
+				
+			</Element>
+			<Element name="nameType">
+				<Documentation></Documentation>
+				
+			</Element>
 		</Component>
 		<Component name="PersonData">
-			<clariah:explanation src="documentation"/>
+<!--			<Documentation></Documentation>-->
 			<Component name="BirthDate">
-				<clariah:explanation src="documentation"/>
-				<Component name="LabelObserved">
-					<Element name="labelAsWritten">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
-				</Component>
 				<Component name="DateNormalized">
-					<clariah:explanation src="documentation"/>
-					<Element name="dateStart">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Element name="dateEnd">
-						<clariah:explanation src="documentation"/>
-					</Element>
+					<Documentation></Documentation>
+					<Element name="dateStart"><!--cues--></Element>
+					<Element name="dateEnd"><!--cues--></Element>
 					<Element name="calendar">
 						
 					</Element>
 					<Element name="noteDate">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
 				</Component>
 			</Component>
 			<Component name="DeathDate">
-				<clariah:explanation src="documentation"/>
-				<Component name="LabelObserved">
-					<Element name="labelAsWritten">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
-				</Component>
 				<Component name="DateNormalized">
-					<clariah:explanation src="documentation"/>
-					<Element name="dateStart">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Element name="dateEnd">
-						<clariah:explanation src="documentation"/>
-					</Element>
+					<Documentation></Documentation>
+					<Element name="dateStart"><!--cues--></Element>
+					<Element name="dateEnd"><!--cues--></Element>
 					<Element name="calendar">
 						
 					</Element>
 					<Element name="noteDate">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
 				</Component>
 			</Component>
 			<Component name="FloruitPeriods">
-				<clariah:explanation src="documentation"/>
+				<Documentation></Documentation>
 				<Component name="DateObservation">
 					<Element name="dateAsWritten">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
 				</Component>
 				<Component name="DateNormalized">
-					<clariah:explanation src="documentation"/>
-					<Element name="dateStart">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Element name="dateEnd">
-						<clariah:explanation src="documentation"/>
-					</Element>
+					<Documentation></Documentation>
+					<Element name="dateStart"><!--cues--></Element>
+					<Element name="dateEnd"><!--cues--></Element>
 					<Element name="calendar">
 						
 					</Element>
 					<Element name="noteDate">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
 				</Component>
 			</Component>
 			<Component name="BirthPlace">
-				<Component name="LabelObserved">
-					<Element name="labelAsWritten">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
-				</Component>
-				<Component name="Relationship">
-					<clariah:label xml:lang="en">Link</clariah:label>
-					<Element name="to">
-						<clariah:explanation src="documentation"/>
-						<clariah:label xml:lang="en">Link to place</clariah:label>
-						<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
-					</Element>
-					<Element name="category">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Element name="description">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Element name="date">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
-				</Component>
+				<Element name="to" cue:class="skosType">
+					<Documentation></Documentation>
+					<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
+				</Element>
 			</Component>
 			<Component name="DeathPlace">
-				<Component name="LabelObserved">
-					<Element name="labelAsWritten">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
-				</Component>
-				<Component name="Relationship">
-					<clariah:label xml:lang="en">Link</clariah:label>
-					<Element name="to">
-						<clariah:explanation src="documentation"/>
-						<clariah:label xml:lang="en">Link to place</clariah:label>
-						<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
-					</Element>
-					<Element name="category">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Element name="description">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Element name="date">
-						<clariah:explanation src="documentation"/>
-					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
-							
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
-				</Component>
-			</Component>
-			<Component name="LifeEventOther">
-				<clariah:explanation src="documentation"/>
-				<Element name="eventType"><!--cues--></Element>
-				<Component name="EventName">
-					<Component name="LabelObserved">
-						<Element name="labelAsWritten">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Component name="Confidence">
-							<Element name="confidenceValue">
-								<clariah:explanation src="documentation"/>
-								
-							</Element>
-							<Element name="confidenceScore"><!--cues--></Element>
-						</Component>
-					</Component>
-					<Component name="EventNormalized">
-						<Element name="eventNameNormalizedString"><!--cues--></Element>
-						<Component name="EventIdentifiers">
-							<Component name="Identifiers">
-								<clariah:explanation src="documentation"/>
-								<Element name="identifierType">
-									<clariah:explanation src="documentation"/>
-									
-								</Element>
-								<Element name="identifierValue">
-									<clariah:explanation src="documentation"/>
-								</Element>
-								<Element name="identifierUri">
-									<clariah:explanation src="documentation"/>
-								</Element>
-							</Component>
-							<Component name="Confidence">
-								<Element name="confidenceValue">
-									<clariah:explanation src="documentation"/>
-									
-								</Element>
-								<Element name="confidenceScore"><!--cues--></Element>
-							</Component>
-						</Component>
-					</Component>
-				</Component>
-				<Component name="EventDate">
-					<Component name="LabelObserved">
-						<Element name="labelAsWritten">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Component name="Confidence">
-							<Element name="confidenceValue">
-								<clariah:explanation src="documentation"/>
-								
-							</Element>
-							<Element name="confidenceScore"><!--cues--></Element>
-						</Component>
-					</Component>
-					<Component name="DateNormalized">
-						<clariah:explanation src="documentation"/>
-						<Element name="dateStart">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Element name="dateEnd">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Element name="calendar">
-							
-						</Element>
-						<Element name="noteDate">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Component name="Confidence">
-							<Element name="confidenceValue">
-								<clariah:explanation src="documentation"/>
-								
-							</Element>
-							<Element name="confidenceScore"><!--cues--></Element>
-						</Component>
-					</Component>
-				</Component>
-				<Component name="EventPlace">
-					<Component name="LabelObserved">
-						<Element name="labelAsWritten">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Component name="Confidence">
-							<Element name="confidenceValue">
-								<clariah:explanation src="documentation"/>
-								
-							</Element>
-							<Element name="confidenceScore"><!--cues--></Element>
-						</Component>
-					</Component>
-					<Component name="Relationship">
-						<Element name="to">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Element name="category">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Element name="description">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Element name="date">
-							<clariah:explanation src="documentation"/>
-						</Element>
-						<Component name="Confidence">
-							<Element name="confidenceValue">
-								<clariah:explanation src="documentation"/>
-								
-							</Element>
-							<Element name="confidenceScore"><!--cues--></Element>
-						</Component>
-					</Component>
-				</Component>
+				<Element name="to" cue:class="skosType">
+					<Documentation></Documentation>
+					<clariah:autoCompleteURI>/app/letter-serenissima-metadata/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
+				</Element>
 			</Component>
 			<Component name="Gender">
 				<Component name="LabelObserved">
 					<Element name="labelAsWritten">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
 					<Component name="Confidence">
 						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
 					</Component>
 				</Component>
 				<Component name="GenderTypeIdentifier">
 					<Component name="Identifiers">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 						<Element name="identifierType">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
 						<Element name="identifierValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 						</Element>
 						<Element name="identifierUri">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 						</Element>
 					</Component>
 					<Component name="Confidence">
 						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
 						<Element name="confidenceScore"><!--cues--></Element>
@@ -517,164 +192,187 @@
 			<Component name="Occupation">
 				<Component name="LabelObserved">
 					<Element name="labelAsWritten">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
 					<Component name="Confidence">
 						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
 					</Component>
 				</Component>
 				<Component name="OccupationIdentifier">
 					<Component name="Identifiers">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 						<Element name="identifierType">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
 						<Element name="identifierValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 						</Element>
 						<Element name="identifierUri">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 						</Element>
 					</Component>
 					<Component name="Confidence">
 						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
 			<Component name="Religion">
 				<Component name="LabelObserved">
 					<Element name="labelAsWritten">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
 					<Component name="Confidence">
 						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="ReligionIdentifier">
 					<Component name="Identifiers">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 						<Element name="identifierType">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
 						<Element name="identifierValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 						</Element>
 						<Element name="identifierUri">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 						</Element>
 					</Component>
 					<Component name="Confidence">
 						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
 			<Component name="Age">
 				<Component name="LabelObserved">
 					<Element name="labelAsWritten">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
 					<Component name="Confidence">
 						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="AgeNormalized">
 					<Element name="hasAgeNormalized">
-						<clariah:explanation src="documentation"/>
+						<Documentation></Documentation>
 					</Element>
 					<Component name="Confidence">
 						<Element name="confidenceValue">
-							<clariah:explanation src="documentation"/>
+							<Documentation></Documentation>
 							
 						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
 		</Component>
-		<Component name="LinkToReconstruction">
-			<Component name="Relationship">
-				<Element name="to">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="category">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="description">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="date">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Component name="Confidence">
-					<Element name="confidenceValue">
-						<clariah:explanation src="documentation"/>
-						
-					</Element>
-					<Element name="confidenceScore"><!--cues--></Element>
-				</Component>
-			</Component>
-			<Component name="ReconstructionActivity">
-				<clariah:explanation src="documentation"/>
-				<Element name="typeActivity">
-					<clariah:explanation src="documentation"/>
-					
-				</Element>
-				<Element name="agent">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="startedAtTime">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="endedAtTime">
-					<clariah:explanation src="documentation"/>
-				</Element>
-				<Element name="noteReconstruction"><!--cues--></Element>
-			</Component>
-			<Component name="Confidence">
-				<Element name="confidenceValue">
-					<clariah:explanation src="documentation"/>
-					
-				</Element>
-				<Element name="confidenceScore"><!--cues--></Element>
-			</Component>
-		</Component>
+<!--		<Component name="LinkToReconstruction" ComponentRef="clarin.eu:cr1:c_1761816151566" CardinalityMin="1" CardinalityMax="1">-->
+<!--			<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">-->
+<!--				<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation></Documentation>-->
+<!--				</Element>-->
+<!--				<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation></Documentation>-->
+<!--				</Element>-->
+<!--				<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation></Documentation>-->
+<!--				</Element>-->
+<!--				<Element name="date" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation></Documentation>-->
+<!--				</Element>-->
+<!--				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation></Documentation>-->
+<!--						<ValueScheme>-->
+<!--							<Vocabulary>-->
+<!--								<enumeration>-->
+<!--									<item ConceptLink="" AppInfo="">Certain</item>-->
+<!--									<item ConceptLink="" AppInfo="">Conjecture</item>-->
+<!--									<item ConceptLink="" AppInfo="">Uncertain</item>-->
+<!--									<item ConceptLink="" AppInfo="">Unknown</item>-->
+<!--								</enumeration>-->
+<!--							</Vocabulary>-->
+<!--						</ValueScheme>-->
+<!--					</Element>-->
+<!--					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--				</Component>-->
+<!--			</Component>-->
+<!--			<Component name="ReconstructionActivity" CardinalityMin="1" CardinalityMax="1">-->
+<!--				<Documentation></Documentation>-->
+<!--				<Element name="typeActivity" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Documentation></Documentation>-->
+<!--					<ValueScheme>-->
+<!--						<Vocabulary>-->
+<!--							<enumeration>-->
+<!--								<item>reconciliation</item>-->
+<!--								<item>close-reading</item>-->
+<!--							</enumeration>-->
+<!--						</Vocabulary>-->
+<!--					</ValueScheme>-->
+<!--				</Element>-->
+<!--				<Element name="agent" ConceptLink="http://www.w3.org/ns/prov#Agent" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation></Documentation>-->
+<!--				</Element>-->
+<!--				<Element name="startedAtTime" ConceptLink="http://www.w3.org/ns/prov#startedAtTime" ValueScheme="dateTime" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation></Documentation>-->
+<!--				</Element>-->
+<!--				<Element name="endedAtTime" ConceptLink="http://www.w3.org/ns/prov#endedAtTime" ValueScheme="dateTime" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation></Documentation>-->
+<!--				</Element>-->
+<!--				<Element name="noteReconstruction" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--			</Component>-->
+<!--			<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
+<!--				<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation></Documentation>-->
+<!--					<ValueScheme>-->
+<!--						<Vocabulary>-->
+<!--							<enumeration>-->
+<!--								<item ConceptLink="" AppInfo="">Certain</item>-->
+<!--								<item ConceptLink="" AppInfo="">Conjecture</item>-->
+<!--								<item ConceptLink="" AppInfo="">Uncertain</item>-->
+<!--								<item ConceptLink="" AppInfo="">Unknown</item>-->
+<!--							</enumeration>-->
+<!--						</Vocabulary>-->
+<!--					</ValueScheme>-->
+<!--				</Element>-->
+<!--				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--			</Component>-->
+<!--		</Component>-->
 		<Component name="SeeAlso">
-			<clariah:label xml:lang="en">Resources</clariah:label>
 			<Element name="url"><!--cues--></Element>
 			<Element name="label"><!--cues--></Element>
 			<Element name="providerSource">
-				<Documentation>the name of the repository or project (e.g., "correspSearch", "Kalliope", "Deutsches Textarchiv")</Documentation>
+				<Documentation></Documentation>
 			</Element>
 		</Component>
 		<Component name="Note">
-			<clariah:explanation src="documentation"/>
+			<Documentation></Documentation>
 			<Element name="noteType">
-				<clariah:explanation src="documentation"/>
+				<Documentation></Documentation>
 				
 			</Element>
-			<Element name="noteContent" cue:inputWidth="60" cue:inputHeight="8"></Element>
+			<Element name="noteContent"><!--cues--></Element>
 		</Component>
 	</Component>
 </ComponentSpec>
